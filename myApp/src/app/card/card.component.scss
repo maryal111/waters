@@ -1,0 +1,44 @@
+$flex-display:flex;
+$flex-column: column;
+
+$card-title-size:24px;
+$card-dollars-size:62px;
+$card-feature-size: 16px;
+$card-margin: 10px; 
+$card-opacity: 0.5;
+$color-white: #ffff;
+$mouse-pointer:pointer;
+
+.card-title{
+    font-size:$card-title-size;
+    margin:$card-margin;
+}
+
+.card-dollars{
+    font-size:$card-dollars-size;
+    margin:$card-margin;
+}
+
+.card-description{
+    font-size:$card-feature-size;
+    margin:$card-margin;
+}
+
+.card{
+    margin: $card-margin;
+    display: $flex-display;
+    flex-direction: $flex-column;
+    color: $color-white;
+}
+
+button{
+    width: 30%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.card-display{
+    opacity: $card-opacity;
+}
+
+

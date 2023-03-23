@@ -1,0 +1,11 @@
+
+<div class="class-container" *ngFor="let card of cardPlans  | paginate: {itemsPerPage : 2, currentPage: p } index as i "  [ngStyle]="{'background-color': getColor(card.planName)}">
+    <div class="card" [ngClass] = "{'card-display': card.buttonDisabled}">
+        <p class="card-title">{{card.planName}}</p>
+        <p class="card-dollars">{{ card.buttonClicked ? "Brought!" : card.planPrice | currency  }}</p>
+        <p class="card-description">{{card.planDescription}}</p>
+        <button (click)="onClick(card, i)" [disabled] = "card.buttonDisabled">{{card.buttonClicked ? 'Cancel': 'Buy'}}</button>
+    </div>
+</div>
+
+<pagination-controls style="position: absolute; bottom: 0;" (pageChange)="p = $event"></pagination-controls>
